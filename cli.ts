@@ -12,7 +12,7 @@ interface CLIOptions {
 const program = new Command();
 
 program
-  .name("eslint-integration")
+  .name("i18n-lint")
   .description("CLI to run ESLint with i18next and React configurations")
   .version("0.1.0");
 

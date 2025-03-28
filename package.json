@@ -1,10 +1,10 @@
 {
-  "name": "eslint-integration",
+  "name": "i18n-lint",
   "module": "index.ts",
   "type": "module",
   "private": true,
   "bin": {
-    "eslint-i18n": "./cli.ts"
+    "i18n-lint": "./cli.ts"
   },
   "scripts": {
     "lint": "bun run cli.ts",
