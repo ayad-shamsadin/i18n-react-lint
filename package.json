@@ -2,7 +2,20 @@
   "name": "i18n-lint",
   "module": "index.ts",
   "type": "module",
-  "private": true,
+  "private": false,
+  "version": "0.1.0",
+  "description": "ESLint integration for i18next that helps detect untranslated literal strings in React applications",
+  "keywords": [
+    "i18n",
+    "i18next",
+    "eslint",
+    "react",
+    "internationalization",
+    "localization",
+    "linting",
+    "translation"
+  ],
+  "license": "MIT",
   "bin": {
     "i18n-lint": "./cli.ts"
   },
