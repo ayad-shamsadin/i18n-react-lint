@@ -23,7 +23,7 @@ bun run lint <directory>
 Or if globally linked:
 
 ```bash
-eslint-i18n <directory>
+i18n-lint <directory>
 ```
 
 ### Options
@@ -40,7 +40,7 @@ bun run lint ./my-project
 bun run lint ./my-project --format json
 
 # Lint using the globally linked command
-eslint-i18n ./my-project
+i18n-lint ./my-project
 ```
 
 ## Build
