@@ -36,6 +36,7 @@
   "dependencies": {
     "@types/commander": "^2.12.5",
     "commander": "^13.1.0",
-    "eslint-plugin-i18next": "^6.1.1"
+    "eslint-plugin-i18next": "^6.1.1",
+    "jiti": "^2.4.2"
   }
 }
