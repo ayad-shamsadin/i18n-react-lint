@@ -1,54 +1,59 @@
-# ESLint Integration with i18next
+# i18n-lint
 
-A CLI tool to run ESLint with i18next and React configurations for internationalization linting.
+ESLint integration for i18next that helps detect untranslated literal strings in React applications.
 
 ## Installation
 
 ```bash
-# Install dependencies
-bun install
+# Using npm
+npm install i18n-lint --save-dev
 
-# Link CLI globally (optional)
-bun link
+# Using yarn
+yarn add i18n-lint --dev
+
+# Using bun
+bun add i18n-lint --dev
 ```
 
 ## Usage
 
-Run the CLI directly:
+### Command Line
 
 ```bash
-bun run lint <directory>
+# Run the linter on a directory
+npx i18n-lint ./path/to/your/project
+
+# Run with specific output format
+npx i18n-lint ./path/to/your/project --format json
 ```
 
-Or if globally linked:
+### API
 
-```bash
-i18n-lint <directory>
+```typescript
+import { filterLiteralStringErrors } from 'i18n-lint';
+
+async function findErrors() {
+  const results = await filterLiteralStringErrors('./path/to/your/project');
+  console.log(results);
+}
+
+findErrors();
 ```
 
-### Options
+## Features
 
-- `-f, --format <format>`: Output format (json, text). Default: text.
+- Detects untranslated literal strings in JSX components
+- Configurable with ESLint settings
+- Works with React and i18next
+- Provides both CLI and programmatic API
 
-## Examples
+## Configuration
 
-```bash
-# Lint a directory with default text output
-bun run lint ./my-project
+The default configuration includes:
+- TypeScript ESLint recommended rules
+- React ESLint recommended rules
+- i18next ESLint recommended rules
 
-# Lint and get JSON output
-bun run lint ./my-project --format json
+## License
 
-# Lint using the globally linked command
-i18n-lint ./my-project
-```
-
-## Build
-
-To build a standalone executable:
-
-```bash
-bun run build
-```
-
-This will create a build in the `dist` directory.
+MIT
