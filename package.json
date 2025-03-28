@@ -3,6 +3,13 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "bin": {
+    "eslint-i18n": "./cli.ts"
+  },
+  "scripts": {
+    "lint": "bun run cli.ts",
+    "build": "bun build cli.ts --outdir ./dist --target node"
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "eslint": "^9.23.0",
@@ -14,6 +21,8 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "@types/commander": "^2.12.5",
+    "commander": "^13.1.0",
     "eslint-plugin-i18next": "^6.1.1"
   }
 }

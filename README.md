@@ -1,15 +1,54 @@
-# eslint-integration
+# ESLint Integration with i18next
 
-To install dependencies:
+A CLI tool to run ESLint with i18next and React configurations for internationalization linting.
+
+## Installation
 
 ```bash
+# Install dependencies
 bun install
+
+# Link CLI globally (optional)
+bun link
 ```
 
-To run:
+## Usage
+
+Run the CLI directly:
 
 ```bash
-bun run index.ts
+bun run lint <directory>
 ```
 
-This project was created using `bun init` in bun v1.2.7. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+Or if globally linked:
+
+```bash
+eslint-i18n <directory>
+```
+
+### Options
+
+- `-f, --format <format>`: Output format (json, text). Default: text.
+
+## Examples
+
+```bash
+# Lint a directory with default text output
+bun run lint ./my-project
+
+# Lint and get JSON output
+bun run lint ./my-project --format json
+
+# Lint using the globally linked command
+eslint-i18n ./my-project
+```
+
+## Build
+
+To build a standalone executable:
+
+```bash
+bun run build
+```
+
+This will create a build in the `dist` directory.
