@@ -6,13 +6,13 @@ ESLint integration for i18next that helps detect untranslated literal strings in
 
 ```bash
 # Using npm
-npm install i18n-lint --save-dev
+npm install i18n-react-lint --save-dev
 
 # Using yarn
-yarn add i18n-lint --dev
+yarn add i18n-react-lint --dev
 
 # Using bun
-bun add i18n-lint --dev
+bun add i18n-react-lint --dev
 ```
 
 ## Usage
@@ -21,16 +21,16 @@ bun add i18n-lint --dev
 
 ```bash
 # Run the linter on a directory
-npx i18n-lint ./path/to/your/project
+npx i18n-react-lint ./path/to/your/project
 
 # Run with specific output format
-npx i18n-lint ./path/to/your/project --format json
+npx i18n-react-lint ./path/to/your/project --format json
 ```
 
 ### API
 
 ```typescript
-import { filterLiteralStringErrors } from 'i18n-lint';
+import { filterLiteralStringErrors } from 'i18n-react-lint';
 
 async function findErrors() {
   const results = await filterLiteralStringErrors('./path/to/your/project');

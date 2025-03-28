@@ -1,5 +1,5 @@
 {
-  "name": "i18n-lint",
+  "name": "i18n-react-lint",
   "module": "index.ts",
   "type": "module",
   "private": false,
