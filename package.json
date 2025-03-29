@@ -3,7 +3,7 @@
   "module": "index.ts",
   "type": "module",
   "private": false,
-  "version": "1.2.22",
+  "version": "1.2.23",
   "description": "ESLint integration for i18next that helps detect untranslated literal strings in React applications",
   "keywords": [
     "i18n",
@@ -21,7 +21,7 @@
   },
   "scripts": {
     "lint": "bun run cli.ts",
-    "build": "bun build cli.ts --outdir ./dist --target node --minify"
+    "build": "bun build cli.ts --outdir ./dist --target node --minify && bun build ai-helper.ts --outdir ./dist --target node --minify"
   },
   "devDependencies": {
     "@types/bun": "latest"
@@ -30,19 +30,23 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.0",
     "@types/commander": "^2.12.5",
     "commander": "^13.1.0",
-    "eslint-plugin-i18next": "^6.1.1",
-    "jiti": "^2.4.2",
     "eslint": "^9.23.0",
+    "eslint-plugin-i18next": "^6.1.1",
     "eslint-plugin-react": "^7.37.4",
     "globals": "^16.0.0",
+    "jiti": "^2.4.2",
+    "mime-types": "^3.0.1",
     "typescript-eslint": "^8.28.0"
   },
   "files": [
     "dist/",
     "index.ts",
     "index.js",
+    "ai-helper.ts",
+    "ai-helper.js",
     "README.md",
     "LICENSE"
   ]
