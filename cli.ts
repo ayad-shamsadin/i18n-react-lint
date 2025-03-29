@@ -1,4 +1,4 @@
-#!/usr/bin/env bun
+#!/usr/bin/env node
 import { defaultConfig, filterLiteralStringErrors } from "./index.js";
 import type { LintResult } from "./index.js";
 import path from "path";
@@ -14,7 +14,7 @@ const program = new Command();
 program
   .name("i18n-react-lint")
   .description("CLI to run ESLint with i18next and React configurations")
-  .version("0.1.0");
+  .version("1.2.21");
 
 program
   .argument("[directory]", "Path to the directory to lint (defaults to current directory)")
