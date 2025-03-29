@@ -14,7 +14,7 @@ const program = new Command();
 program
   .name("i18n-react-lint")
   .description("CLI to run ESLint with i18next and React configurations")
-  .version("1.2.21");
+  .version("1.2.22");
 
 program
   .argument("[directory]", "Path to the directory to lint (defaults to current directory)")
