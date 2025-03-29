@@ -6,13 +6,13 @@ ESLint integration for i18next that helps detect untranslated literal strings in
 
 ```bash
 # Using npm
-npm install i18n-react-lint --save-dev
+npm install -g i18n-react-lint
 
 # Using yarn
-yarn add i18n-react-lint --dev
+yarn global add i18n-react-lint
 
 # Using bun
-bun add i18n-react-lint --dev
+bun add -g i18n-react-lint
 ```
 
 ## Usage
@@ -27,17 +27,12 @@ npx i18n-react-lint ./path/to/your/project
 npx i18n-react-lint ./path/to/your/project --format json
 ```
 
-### API
+```bash
+# Run the linter on a directory
+i18n-react-lint ./path/to/your/project
 
-```typescript
-import { filterLiteralStringErrors } from 'i18n-react-lint';
-
-async function findErrors() {
-  const results = await filterLiteralStringErrors('./path/to/your/project');
-  console.log(results);
-}
-
-findErrors();
+# Run with specific output format
+i18n-react-lint ./path/to/your/project --format json
 ```
 
 ## Features
@@ -45,14 +40,13 @@ findErrors();
 - Detects untranslated literal strings in JSX components
 - Configurable with ESLint settings
 - Works with React and i18next
-- Provides both CLI and programmatic API
 
-## Configuration
+## Todo  
 
-The default configuration includes:
-- TypeScript ESLint recommended rules
-- React ESLint recommended rules
-- i18next ESLint recommended rules
+- [ ] Add AI API key integration  
+- [ ] Accept a list of sentences as JSON key-value pairs  
+- [ ] Add translation file support or generate multiple translations in different languages  
+- [ ] Improve CLI user interface
 
 ## License
 
