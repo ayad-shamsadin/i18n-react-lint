@@ -17,12 +17,12 @@ program
   .version("0.1.0");
 
 program
-  .argument("<directory>", "Path to the directory to lint")
+  .argument("[directory]", "Path to the directory to lint (defaults to current directory)")
   .option("-f, --format <format>", "Output format (json, text)", "text")
-  .action(async (directory: string, options: CLIOptions) => {
+  .action(async (directory: string = ".", options: CLIOptions) => {
     try {
-      // Check if directory exists
-      const targetPath = path.resolve(process.cwd(), directory);
+      const targetPath = directory ? path.resolve(process.cwd(), directory) : process.cwd();
+      
       if (!fs.existsSync(targetPath)) {
         console.error(`Error: Directory "${targetPath}" does not exist.`);
         process.exit(1);
