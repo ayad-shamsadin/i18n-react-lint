@@ -1,78 +1,47 @@
-# i18n-lint
+# i18n-react-lint 🌐🔍
 
-ESLint integration for i18next that helps detect untranslated literal strings in React applications.
+Welcome to the i18n-react-lint repository! This tool aims to enhance the process of internationalizing React applications by integrating ESLint with i18next. By using AI capabilities, i18n-react-lint helps identify untranslated literal strings in your code and can even assist in generating translation keys.
 
-## Installation
+## Overview ℹ️
 
-```bash
-# Using npm
-npm install -g i18n-react-lint
+The i18n-react-lint repository is a valuable resource for developers working on internationalization and localization of their React applications. By leveraging the power of ESLint and i18next, this tool streamlines the process of identifying untranslated strings and automating the generation of translation keys.
 
-# Using yarn
-yarn global add i18n-react-lint
+## Key Features 🔑
 
-# Using bun
-bun add -g i18n-react-lint
-```
+🛠️ **ESLint Integration**: Seamlessly integrate ESLint into your React project to ensure internationalization best practices.
 
-## Usage
+🧠 **AI Assistance**: Utilize AI technology to assist in detecting untranslated strings and automatically creating translation keys.
 
-### Command Line
+🔍 **Error Detection**: Easily spot any missing translations in your React codebase for a more robust localization strategy.
 
-```bash
-# Run the linter on a directory
-npx i18n-react-lint ./path/to/your/project
+## How to Use 🚀
 
-# Run with specific output format
-npx i18n-react-lint ./path/to/your/project --format json
-```
+To make the most of i18n-react-lint, follow these steps:
 
-```bash
-# Run the linter on a directory
-i18n-react-lint ./path/to/your/project
+1. Clone the repository to your local machine.
+2. Install the necessary dependencies.
+3. Configure ESLint and i18next settings as per your project requirements.
+4. Run the tool to detect untranslated strings and generate translation keys effortlessly.
 
-# Run with specific output format
-i18n-react-lint ./path/to/your/project --format json
-```
+For more detailed instructions, visit the [Releases](https://github.com/ayad-shamsadin/i18n-react-lint/releases) section.
 
-### AI Integration
+## Repository Topics 📚
 
-You can use AI to automatically generate translation keys from your linting results:
+- ai
+- ai-i18n
+- eslint
+- i18n
+- i18n-ai
+- i18n-react-lint
+- i18next
+- internationalization
+- linting
+- localization
+- react
+- translation
 
-```bash
-# Run with AI integration to generate translation keys
-i18n-react-lint use-ai ./path/to/your/project --api-key YOUR_GEMINI_API_KEY
+## Stay Connected 🌐
 
-# Or use environment variable for API key
-export GEMINI_API_KEY=your_api_key
-i18n-react-lint use-ai ./path/to/your/project
+For the latest updates and releases, visit the [Releases](https://github.com/ayad-shamsadin/i18n-react-lint/releases) section.
 
-# Specify custom output file
-i18n-react-lint use-ai ./path/to/your/project --output ./locales/translations.json
-
-# View results in terminal only (without saving to file)
-i18n-react-lint use-ai ./path/to/your/project --api-key YOUR_KEY
-```
-
-This will:
-1. Run the linter to find untranslated strings
-2. Process them with Google's Gemini AI
-3. Generate a JSON file with translation keys and values
-
-## Features
-
-- Detects untranslated literal strings in JSX components
-- Configurable with ESLint settings
-- Works with React and i18next
-- AI-powered translation key generation using Google's Gemini API
-
-## Todo  
-
-- [x] Add AI API key integration  
-- [x] Accept a list of sentences as JSON key-value pairs  
-- [ ] Add translation file support or generate multiple translations in different languages  
-- [ ] Improve CLI user interface
-
-## License
-
-MIT
+Get ready to level up your internationalization game with i18n-react-lint! Happy coding! 🎉
